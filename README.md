@@ -1,7 +1,6 @@
 # Plush Editor 🧠
 
 > *Soft on the surface, sharp on the scene.*  
-> A tribute to Bodhi Crocodile.
 
 **Plush** is a clean, offline-first editing tool built for writers. Detect clichés, trim filler, analyze dialogue, and generate polished reports in one click.
 
