@@ -200,7 +200,7 @@ def main():
                     st.success("🎉 Plush Pro unlocked!")
                 else:
                     st.error("❌ Invalid key—try again or purchase above.")
-            st.markdown("[Buy Plush Pro for $19](https://gumroad.com/l/plush-pro)")
+            st.markdown("[Buy Plush Pro for $19](https://bradleyc51.gumroad.com/l/ccvuo)")
         else:
             st.info("✅ Plush Pro features unlocked!")
 
