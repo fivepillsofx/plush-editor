@@ -188,8 +188,21 @@ def export_full_report(text, style="None", filename="full_report.txt"):
 def main():
     st.set_page_config(page_title="Plush: The Writer Toolkit", layout="centered")
     st.title("🧠 Plush: The Writer Toolkit")
-    st.markdown("*Tribute to Bodhi Crocodile — soft on the surface, sharp on the scene.*")
+    st.markdown("*Soft on the surface, sharp on the scene.*")
 
+with st.sidebar:
+    st.header("🔐 Plush Pro Unlock")
+    if not st.session_state.pro_unlocked:
+        key = st.text_input("Enter your license key")
+        if st.button("Verify Key"):
+            if verify_license(key):
+                st.session_state.pro_unlocked = True
+                st.success("🎉 Plush Pro unlocked!")
+            else:
+                st.error("❌ Invalid key—please try again or purchase above.")
+        st.markdown("[Buy Plush Pro for $19](https://gumroad.com/l/plush-pro)")
+    else:
+        st.info("✅ Plush Pro features unlocked!")
     style = st.selectbox("🎨 Choose a Writing Style Preset", ["None"] + list(STYLE_PRESETS.keys()))
     uploaded_file = st.file_uploader("📂 Upload a `.txt`, `.docx`, or `.rtf` file", type=["txt", "docx", "rtf"])
 
